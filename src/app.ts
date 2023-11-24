@@ -13,7 +13,7 @@ app.use('/api/users', UserRoutes);
 
 app.get('/', (req: Request, res: Response, next: NextFunction) => {
   try {
-    res.send("info-store server saying 'Hello World'!");
+    res.send("BanglaBazar server saying 'Hello World'!");
   } catch (error) {
     next(error);
   }
