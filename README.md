@@ -2,8 +2,7 @@
 
 This backend project serves as a centralized hub for managing and processing data.
 
-#### vercel deploy endpoint : https://banglabazar.vercel.app/
-
+#### vercel deploy endpoint : https://banglabazar.vercel.app/api/users/
 ## Prerequisites
 
 Before you begin, ensure that you have the following installed on your machine:
