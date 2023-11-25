@@ -14,3 +14,11 @@ Before you begin, ensure that you have the following installed on your machine:
   ```bash
   npm install -g typescript
 
+
+## How To Installing ?
+
+Clone the repository:
+ ```bash
+  npm install -g typescript
+
+
