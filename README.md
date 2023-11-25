@@ -1,6 +1,8 @@
 # CRUD_Mastery
 
-This is a backend project that serves as a centralized hub for managing and processing data.
+This backend project serves as a centralized hub for managing and processing data.
+
+#### vercel deploy endpoint : https://banglabazar.vercel.app/
 
 ## Prerequisites
 
