@@ -1,7 +1,6 @@
 FROM node:14-alpine
 
-# Set the working directory inside the container
-WORKDIR /src/app
+WORKDIR /dist/app
 
 COPY package*.json ./
 

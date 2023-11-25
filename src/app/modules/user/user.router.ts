@@ -260,7 +260,7 @@
  */
 /**
  * @swagger
- * /users/{userId}:
+ * /{userId}:
  *   delete:
  *     summary: Delete a user by ID
  *     parameters:
@@ -292,7 +292,7 @@
  */
 /**
  * @swagger
- * /users/{userId}/orders:
+ * /{userId}/orders:
  *   put:
  *     summary: Add an order to a user
  *     parameters:
@@ -334,7 +334,7 @@
 
 /**
  * @swagger
- * /users/{userId}/orders:
+ * /{userId}/orders:
  *   get:
  *     summary: Get orders of a user
  *     parameters:
@@ -374,7 +374,7 @@
 
 /**
  * @swagger
- * /users/{userId}/orders/total-price:
+ * /{userId}/orders/total-price:
  *   get:
  *     summary: Calculate the total price of orders of a user
  *     parameters:
