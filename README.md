@@ -1,4 +1,4 @@
-# BanglaBazar 
+# BanglaBazar.com
 
 This backend project serves as a centralized hub for managing and processing data.
 
