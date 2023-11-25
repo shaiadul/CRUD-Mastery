@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { Request, Response } from 'express';
+import { Request, Response } from 'express'
 import {
   addOrder,
   calculateTotalPrice,
@@ -9,9 +9,8 @@ import {
   getOrders,
   getUserById,
   updateUser,
-} from './user.service';
-import { validateUser } from './user.validation';
-
+} from './user.service'
+import { validateUser } from './user.validation'
 
 export const createUsers = async (
   req: Request,
@@ -19,25 +18,25 @@ export const createUsers = async (
 ): Promise<void> => {
   try {
     // Get the user data from the request body
-    const user = req.body;
+    const user = req.body
 
     //   Check if the user.hobbies is an array. If not, make it an array.
     if (!Array.isArray(user.hobbies)) {
-      user.hobbies = [user.hobbies];
+      user.hobbies = [user.hobbies]
     }
 
     // Validate the incoming user data
-    const validatedUser = validateUser(user);
+    const validatedUser = validateUser(user)
 
     // Create the user using the service function
-    const newUser = await createUser(validatedUser);
+    const newUser = await createUser(validatedUser)
 
     // Send the response
     res.status(201).json({
       success: true,
       message: 'User created successfully!',
       data: newUser,
-    });
+    })
   } catch (error: any) {
     // Handle errors, send an appropriate response
     res.status(400).json({
@@ -47,10 +46,9 @@ export const createUsers = async (
         code: 400,
         description: error.message,
       },
-    });
+    })
   }
-};
-
+}
 
 export const getUsersController = async (
   req: Request,
@@ -58,14 +56,14 @@ export const getUsersController = async (
 ): Promise<void> => {
   try {
     // Get all users using the service function
-    const users = await getAllUsers();
+    const users = await getAllUsers()
 
     // Send the response
     res.status(200).json({
       success: true,
       message: 'Users fetched successfully!',
       data: users,
-    });
+    })
   } catch (error: any) {
     // Handle errors, send an appropriate response
     res.status(400).json({
@@ -75,10 +73,9 @@ export const getUsersController = async (
         code: 400,
         description: error.message,
       },
-    });
+    })
   }
-};
-
+}
 
 export const userByIdController = async (
   req: Request,
@@ -86,17 +83,17 @@ export const userByIdController = async (
 ): Promise<void> => {
   try {
     // Get the user id from the request params
-    const { userId } = req.params;
+    const { userId } = req.params
 
     // Get the user using the service function
-    const user = await getUserById(userId);
+    const user = await getUserById(userId)
 
     // Send the response
     res.status(200).json({
       success: true,
       message: 'User fetched successfully!',
       data: user,
-    });
+    })
   } catch (error: any) {
     // Handle errors, send an appropriate response
     res.status(400).json({
@@ -106,10 +103,9 @@ export const userByIdController = async (
         code: 400,
         description: error.message,
       },
-    });
+    })
   }
-};
-
+}
 
 export const updateAUser = async (
   req: Request,
@@ -117,23 +113,23 @@ export const updateAUser = async (
 ): Promise<void> => {
   try {
     // Get the user id from the request params
-    const { userId } = req.params;
+    const { userId } = req.params
 
     // Get the user data from the request body
-    const userData = req.body;
+    const userData = req.body
 
     // Validate the incoming user data
-    const validatedUser = validateUser(userData);
+    const validatedUser = validateUser(userData)
 
     // Update the user using the service function
-    const updatedUser = await updateUser(userId, validatedUser);
+    const updatedUser = await updateUser(userId, validatedUser)
 
     // Send the response
     res.status(200).json({
       success: true,
       message: 'User updated successfully!',
       data: updatedUser,
-    });
+    })
   } catch (error: any) {
     // Handle errors, send an appropriate response
     res.status(400).json({
@@ -143,9 +139,9 @@ export const updateAUser = async (
         code: 400,
         description: error.message,
       },
-    });
+    })
   }
-};
+}
 
 // Controller function for deleting a user by userId
 export const deleteSingleUser = async (
@@ -154,17 +150,17 @@ export const deleteSingleUser = async (
 ): Promise<void> => {
   try {
     // Get the user id from the request params
-    const { userId } = req.params;
+    const { userId } = req.params
 
     // Get the user using the service function
-    await deleteUser(userId);
+    await deleteUser(userId)
 
     // Send the response
     res.status(200).json({
       success: true,
       message: 'User deleted successfully!',
       data: null,
-    });
+    })
   } catch (error: any) {
     // Handle errors, send an appropriate response
     res.status(400).json({
@@ -174,31 +170,28 @@ export const deleteSingleUser = async (
         code: 400,
         description: error.message,
       },
-    });
+    })
   }
-};
+}
 
 // Controller function for adding an order to a user
-export const addOrders = async (
-  req: Request,
-  res: Response,
-): Promise<void> => {
+export const addOrders = async (req: Request, res: Response): Promise<void> => {
   try {
     // Get the user id from the request params
-    const { userId } = req.params;
+    const { userId } = req.params
 
     // Get the order data from the request body
-    const orderData = req.body;
+    const orderData = req.body
 
     // Add the order to the user using the service function
-    await addOrder(userId, orderData);
+    await addOrder(userId, orderData)
 
     // Send the response
     res.status(200).json({
       success: true,
       message: 'Order added successfully!',
       data: null,
-    });
+    })
   } catch (error: any) {
     // Handle errors, send an appropriate response
     res.status(400).json({
@@ -208,9 +201,9 @@ export const addOrders = async (
         code: 400,
         description: error.message,
       },
-    });
+    })
   }
-};
+}
 
 // Controller function for getting orders of a user
 export const getOrdersOfUsers = async (
@@ -219,17 +212,17 @@ export const getOrdersOfUsers = async (
 ): Promise<void> => {
   try {
     // Get the user id from the request params
-    const { userId } = req.params;
+    const { userId } = req.params
 
     // Get the orders of the user using the service function
-    const orders = await getOrders(userId);
+    const orders = await getOrders(userId)
 
     // Send the response
     res.status(200).json({
       success: true,
       message: 'Orders fetched successfully!',
       data: { orders },
-    });
+    })
   } catch (error: any) {
     // Handle errors, send an appropriate response
     res.status(400).json({
@@ -239,9 +232,9 @@ export const getOrdersOfUsers = async (
         code: 400,
         description: error.message,
       },
-    });
+    })
   }
-};
+}
 
 // Controller function for calculating the total price of orders of a user
 export const calculatePrice = async (
@@ -250,10 +243,10 @@ export const calculatePrice = async (
 ): Promise<void> => {
   try {
     // Get the user id from the request params
-    const { userId } = req.params;
+    const { userId } = req.params
 
     // Get the orders of the user using the service function
-    const totalPrice = await calculateTotalPrice(userId);
+    const totalPrice = await calculateTotalPrice(userId)
 
     // Send the response
     res.status(200).json({
@@ -262,7 +255,7 @@ export const calculatePrice = async (
       data: {
         totalPrice: totalPrice.toFixed(2),
       },
-    });
+    })
   } catch (error: any) {
     // Handle errors, send an appropriate response
     res.status(400).json({
@@ -272,6 +265,6 @@ export const calculatePrice = async (
         code: 400,
         description: error.message,
       },
-    });
+    })
   }
-};
+}
