@@ -9,7 +9,7 @@ async function main() {
 
     // listen to server
     app.listen(config.port,() => {
-      console.log(`Example app listening on port ${config.port}`)
+      console.log(`BanglaBazar app listening on port ${config.port}`)
     })
   } catch (error: unknown) {
     console.log(error)

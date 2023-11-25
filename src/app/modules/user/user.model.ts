@@ -130,5 +130,5 @@ userSchema.statics.isUserExist = async function (
   return user;
 };
 
-// Create and export the mongoose model
+// export the mongoose model
 export const User = model<IUser, UserModel>('User', userSchema);

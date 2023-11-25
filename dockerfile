@@ -1,6 +1,7 @@
-FROM node:alpine
+FROM node:14-alpine
 
-WORKDIR /dist/server.js
+# Set the working directory inside the container
+WORKDIR /usr/src/app
 
 COPY package*.json ./
 
@@ -10,4 +11,5 @@ COPY . .
 
 EXPOSE 5000
 
-CMD [ "node", "app.js" ]
+CMD ["npm", "run", "start:dev"]
+
