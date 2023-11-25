@@ -236,7 +236,7 @@
  *               data:
  *                 _id: 1234567890
  *                 username: john_doe_updated
- *                 fullName: 
+ *                 fullName:
  *                   firstName: John
  *                   lastName: Doe
  *                 age: 31
@@ -308,7 +308,7 @@
  *       content:
  *         application/json:
  *           example:
- *             orderName: Example Order
+ *             productName: Example Order
  *             quantity: 2
  *             price: 19.99
  *     responses:
@@ -354,10 +354,10 @@
  *               message: Orders fetched successfully!
  *               data:
  *                 orders:
- *                   - orderName: Example Order 1
+ *                   - productName: Example Order 1
  *                     quantity: 2
  *                     price: 19.99
- *                   - orderName: Example Order 2
+ *                   - productName: Example Order 2
  *                     quantity: 1
  *                     price: 29.99
  *       '400':
@@ -406,9 +406,6 @@
  *                 description: Error message here
  */
 
-
-
-
 import { Router } from 'express'
 import {
   addOrders,
@@ -422,8 +419,6 @@ import {
 } from './user.controller'
 
 const router = Router()
-
-
 
 router.post('/', createUsers)
 router.get('/', getUsersController)
