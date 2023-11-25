@@ -19,15 +19,15 @@ Before you begin, ensure that you have the following installed on your machine:
 
 #### Clone the repository:
  ```bash
-  git clone https://github.com/shaiadul/CRUD-Mastery.git
+ git clone https://github.com/shaiadul/CRUD-Mastery.git
 ```
 #### Navigate to the project directory:
  ```bash
-  cd CRUD_Mastery
+ cd CRUD_Mastery
 ```
 #### Install dependencies:
  ```bash
-   npm install
+npm install
 ```
 
 
@@ -61,16 +61,16 @@ To start the application in production mode:
 ```
 To automatically fix linting issues:
  ```bash
-   npm run lint:fix
+ npm run lint:fix
 ```
 
 ## Code Formatting
 
 To format the code using Prettier:
  ```bash
-   npm run format
+ npm run format
 ```
 To automatically fix formatting issues:
  ```bash
-     npm run format:fix
+ npm run format:fix
 ```
