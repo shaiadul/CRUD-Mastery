@@ -15,10 +15,9 @@ Before you begin, ensure that you have the following installed on your machine:
   npm install -g typescript
 
 
-## How To Installing ?
+## How To Installing?
 
 Clone the repository:
+
  ```bash
   git clone https://github.com/shaiadul/CRUD-Mastery.git
-
-
