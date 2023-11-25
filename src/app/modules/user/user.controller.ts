@@ -12,7 +12,7 @@ import {
 } from './user.service';
 import { validateUser } from './user.validation';
 
-// Controller function for creating a new user
+
 export const createUsers = async (
   req: Request,
   res: Response,
@@ -51,7 +51,7 @@ export const createUsers = async (
   }
 };
 
-// Controller function for getting all users
+
 export const getUsersController = async (
   req: Request,
   res: Response,
@@ -79,7 +79,7 @@ export const getUsersController = async (
   }
 };
 
-// Controller function for getting a user by id
+
 export const userByIdController = async (
   req: Request,
   res: Response,
@@ -110,7 +110,7 @@ export const userByIdController = async (
   }
 };
 
-// Controller function for updating a user by userId
+
 export const updateAUser = async (
   req: Request,
   res: Response,
